@@ -165,7 +165,7 @@ class MainActivity : ComponentActivity() {
         root.addView(addressRow)
 
         endpointText = TextView(this).apply {
-            text = "Connect this phone to the same Wi-Fi as the dashboard."
+            text = "Connect this phone and the dashboard device to the same Wi-Fi, then enter the IP shown here in a dashboard stream box."
             textSize = 13f
             setTextColor(muted)
             setPadding(0, dp(2), 0, dp(8))
@@ -266,7 +266,7 @@ class MainActivity : ComponentActivity() {
         wifiButton.isEnabled = false
         statusText.text = "Starting camera..."
         endpointText.text =
-            "Website stream: http://$address:81/stream\nDetection snapshots: http://$address/capture"
+            "Website stream: http://$address:8081/stream\nDetection snapshots: http://$address:8080/capture"
         bindCamera()
     }
 

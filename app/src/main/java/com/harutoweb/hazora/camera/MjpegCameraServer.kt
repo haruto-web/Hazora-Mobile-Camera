@@ -303,8 +303,8 @@ class MjpegCameraServer(
     }
 
     companion object {
-        const val DEFAULT_STREAM_PORT = 81
-        const val DEFAULT_CAPTURE_PORT = 80
+        const val DEFAULT_STREAM_PORT = 8081
+        const val DEFAULT_CAPTURE_PORT = 8080
         private const val HEADER_TIMEOUT_MS = 5_000
         private const val MAX_HEADER_LINE_BYTES = 8_192
         private const val MAX_HEADER_BYTES = 16_384

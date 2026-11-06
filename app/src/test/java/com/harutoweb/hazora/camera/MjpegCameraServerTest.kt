@@ -10,6 +10,12 @@ import java.net.URL
 
 class MjpegCameraServerTest {
     @Test
+    fun defaultPortsDoNotRequirePrivilegedPortPermissions() {
+        assertTrue(MjpegCameraServer.DEFAULT_STREAM_PORT >= 1024)
+        assertTrue(MjpegCameraServer.DEFAULT_CAPTURE_PORT >= 1024)
+    }
+
+    @Test
     fun captureReturnsLatestJpegWithCorsHeaders() {
         val jpeg = byteArrayOf(0xff.toByte(), 0xd8.toByte(), 0x11, 0x22, 0xff.toByte(), 0xd9.toByte())
         MjpegCameraServer(
